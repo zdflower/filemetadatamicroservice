@@ -1,0 +1,14 @@
+{
+  "name": "filemetadata",
+  "version": "1.0.0",
+  "description": "File Metadata Microservice - FCC Backend Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZDFlower",
+  "license": "",
+  "dependencies": {
+    "multer": "^1.3.0"
+  }
+}
