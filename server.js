@@ -3,17 +3,17 @@
 var express = require('express');
 var app = express();
 
-var bodyParser = require('body-parser');
+var multer = require('multer');
+
+var upload = multer();
 
 app.use(express.static('public'));
-
-app.use(bodyParser.urlencoded( { extended: false } ));
 
 app.get('/', function(req, res) {
 		  res.sendFile( __dirname + '/views/index.html' );
     });
 
- app.post('/', function(req, res) {
+ app.post('/', upload.single(), function(req, res) {
     res.send(req.body);
  });
     
